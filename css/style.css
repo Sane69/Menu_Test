@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url(../Fonts/GothamPro-Medium.ttf);
+}
+@font-face {
+    font-family: 'Manrope';
+	src: url(../Fonts/thin.otf);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+ *,
+ *:before,
+ *:after {
+    box-sizing: border-box;
+ }
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+ .main {
+     background: url(../img/bg.png) #222129 no-repeat;
+     background-size: cover;
+     background-position: center;
+     height: 100vh;
+ }
+ .main__menu {
+     padding: 50px 50px 0 50px;
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .main__menu--logo {
+     display: flex;
+     align-items: center;
+ }
+ .main__menu--logo a:hover {
+    transform: scale(1.2);
+    transition: all 300ms;
+ }
+ .main__menu--logo span {
+    font-family: 'Gotham Pro';
+    font-size: 15px;
+    line-height: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-left: 20px;
+}
+.main__menu--closed {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+.main__menu--closed:hover {
+    transform: scale(1.2);
+    transition: all 300ms;
+}
+.main__menu--closed_first {
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 32px;
+    background: #FFFFFF;
+    transform: rotate(-45deg);
+    border-radius: 9px;
+    opacity: 1;
+    top: 0;
+    right: 0%;
+    cursor: pointer;
+}
+.main__menu--closed_second{
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 32px;
+    background: #FFFFFF;
+    transform: rotate(45deg);
+    border-radius: 9px;
+    opacity: 1;
+    top: 0;
+    right: 0%;
+}
+
+.main__info {
+    padding-top: 250px;
+}
+.main__info--flex {
+    display: flex;
+    justify-content: space-around;
+}
+.main__info--flex_block-name {
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 50px;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: left;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+.main__info--flex_block-name:hover {
+    color: yellow;
+}
+.main__info--flex_block-text {
+    font-family: 'Manrope';
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #D1D1D1;
+    margin: 0;
+}
+
+
+/* Media */
+
+@media screen and (max-width: 700px) {
+    .main {
+        height: auto;
+    }
+    .main__menu {
+        padding: 50px 20px 0 20px;
+    }
+    .main__info {
+        padding-left: 20px;
+        padding-top: 100px;
+    }
+    .main__info--flex {
+        display: block;
+    }
+}
